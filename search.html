@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <link rel="stylesheet" href="happyhourchaser.css" type="text/css" />
+</head>
+
+	<body class="body_search">
+	<div class="header">
+		<input class="button_left" type="button" value="home" onclick="location.href='../design/happyhourchaser.html'"/>
+		<p id="header_search">SEARCH</p>
+	<search</p>
+	</div>
+	<div class="container">
+	<div class="logo">
+	</div>
+	<form>
+		<input class="textbox_1" name="hoursearch" placeholder="eg. beer, appetizers, sushi bar...">
+		<input class="textbox_2" name="placesearch" placeholder="New York, NY">
+		<br>
+    	<input class="checkbox" type="checkbox" name="now">
+    	<label for="now" name="now_1" class="css-label">happening now</label>
+    	<input class="checkbox" type="checkbox" name="today">
+	    <label for="today" name="today_1" class="css-label">today's hours</label>
+	    <input class="checkbox" type="checkbox" name="food">
+	    <label for="food" name="food_1" class="css-label">food deals</label>
+	    	<button type="button" class="blackbutton" id="more" href="#">more</button>
+	    	<br>
+	    	<div id="filter" style="display:none">
+
+		<script type="text/javascript">
+
+			var bobj = document.getElementById('more');
+			var fobj = document.getElementById('filter');
+			bobj.addEventListener('click', function(){
+				if (fobj.style.display == 'none') {
+					fobj.style.display = 'inline-block';
+					bobj.innerHTML = 'less';
+				}
+				else {
+					fobj.style.display = 'none';
+					bobj.innerHTML = 'more';
+				}
+			});
+
+		</script>
+
+	    	from
+	    	<select id="from">
+	    			<option value="blank"></option>
+	    			<option value="12:00 AM">12:00 AM</option>
+	    			<option value="1:00 AM">1:00 AM</option>
+	    			<option value="2:00 AM">2:00 AM</option>
+	    			<option value="3:00 AM">3:00 AM</option>
+	    			<option value="4:00 AM">4:00 AM</option>
+	    			<option value="5:00 AM">5:00 AM</option>
+	    			<option value="6:00 AM">6:00 AM</option>
+	    			<option value="7:00 AM">7:00 AM</option>
+	    			<option value="8:00 AM">8:00 AM</option>
+	    			<option value="9:00 AM">9:00 AM</option>
+	    			<option value="10:00 AM">10:00 AM</option>
+	    			<option value="11:00 AM">11:00 AM</option>
+	    			<option value="12:00 PM">12:00 PM</option>
+	    			<option value="1:00 PM">1:00 PM</option>
+	    			<option value="2:00 PM">2:00 PM</option>
+	    			<option value="3:00 PM">3:00 PM</option>
+	    			<option value="4:00 PM">4:00 PM</option>
+	    			<option value="5:00 PM">5:00 PM</option>
+	    			<option value="6:00 PM">6:00 PM</option>
+	    			<option value="7:00 PM">7:00 PM</option>
+	    			<option value="8:00 PM">8:00 PM</option>
+	    			<option value="9:00 PM">9:00 PM</option>
+	    			<option value="10:00 PM">10:00 PM</option>
+	    			<option value="11:00 PM">11:00 PM</option>
+	    		</select>
+	    		to
+	    		<select id="to">
+	    			<option value="blank"></option>
+	    			<option value="12:00 AM">12:00 AM</option>
+	    			<option value="1:00 AM">1:00 AM</option>
+	    			<option value="2:00 AM">2:00 AM</option>
+	    			<option value="3:00 AM">3:00 AM</option>
+	    			<option value="4:00 AM">4:00 AM</option>
+	    			<option value="5:00 AM">5:00 AM</option>
+	    			<option value="6:00 AM">6:00 AM</option>
+	    			<option value="7:00 AM">7:00 AM</option>
+	    			<option value="8:00 AM">8:00 AM</option>
+	    			<option value="9:00 AM">9:00 AM</option>
+	    			<option value="10:00 AM">10:00 AM</option>
+	    			<option value="11:00 AM">11:00 AM</option>
+	    			<option value="12:00 PM">12:00 PM</option>
+	    			<option value="1:00 PM">1:00 PM</option>
+	    			<option value="2:00 PM">2:00 PM</option>
+	    			<option value="3:00 PM">3:00 PM</option>
+	    			<option value="4:00 PM">4:00 PM</option>
+	    			<option value="5:00 PM">5:00 PM</option>
+	    			<option value="6:00 PM">6:00 PM</option>
+	    			<option value="7:00 PM">7:00 PM</option>
+	    			<option value="8:00 PM">8:00 PM</option>
+	    			<option value="9:00 PM">9:00 PM</option>
+	    			<option value="10:00 PM">10:00 PM</option>
+	    			<option value="11:00 PM">11:00 PM</option>
+	    		</select>
+	    		<br>
+	    		distance
+	    		<select>
+	    			<option value="blank"></option>
+	    			<option value="0.2">0.2 mi</option>
+	    			<option value="1">1 mi</option>
+	    			<option value="5">5 mi</option>
+	    		</select>
+	    		sort by
+	    		<select>
+	    			<option value="rating">rating</option>
+	    			<option value="best match">best match</option>
+	    			<option value="distance">distance</option>
+	    			<br>
+	    		</select>
+	    		<br>
+	    		price
+		    		<input class="checkbox" type="checkbox" name="$">
+		    		<label for="$" name="$_1" class="css-label">$</label>
+		    		<input class="checkbox" type="checkbox" name="$$">
+		    		<label for="$$" name="$$_1" class="css-label">$$</label>
+		    		<input class="checkbox" type="checkbox" name="$$$">
+		    		<label for="$$$" name="$$$_1" class="css-label">$$$</label>
+		    		<input class="checkbox" type="checkbox" name="$$$$">
+		    		<label for="$$$$" name="$$$$_1" class="css-label">$$$$</label>
+	    	</div>
+    		<br>
+    			<br>
+    		<input type="button" class="findhours" value="FIND HAPPY HOURS!" onclick="location.href='../design/result.html'"/>
+	</form>
+</div>
+	<div class="footer">
+		<a id="home" href="../design/happyhourchaser.html">home</a>
+		<a id="search" href="../design/search.html">search</a>
+		<a id="fav" href="../des
+		ign/fav.html">favorite</a>
+</body>
+
+
